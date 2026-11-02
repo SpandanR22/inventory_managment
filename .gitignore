@@ -1,0 +1,43 @@
+# ==============================
+# Environment variables / Secrets
+# ==============================
+.env
+.env.*
+!.env.example
+
+# ==============================
+# Go
+# ==============================
+inventory-backend/vendor/
+inventory-backend/*.exe
+inventory-backend/*.test
+inventory-backend/*.out
+*.log
+
+# ==============================
+# React / Node.js
+# ==============================
+inventory-frontend/node_modules/
+inventory-frontend/dist/
+inventory-frontend/.vite/
+inventory-frontend/coverage/
+
+# ==============================
+# IDE
+# ==============================
+.vscode/
+.idea/
+
+# ==============================
+# OS generated files
+# ==============================
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ==============================
+# Temporary files
+# ==============================
+*.tmp
+*.swp
+*.bak
