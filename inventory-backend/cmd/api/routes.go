@@ -25,8 +25,8 @@ func routes(db *pgxpool.Pool) http.Handler {
 	dashboardHandler := dashboard.NewHandler(db)
 
 	r := chi.NewRouter()
-	r.Use(middleware.RequestID)
-	r.Use(middleware.Logger)
+	r.Use(middleware.RequestID) // gives each request an ID for the logs
+	r.Use(middleware.Logger)    // logs "GET /api/v1/products 200 3ms"
 	r.Use(middleware.Recoverer) // turns a panic into a 500 instead of crashing
 	r.Use(middleware.Timeout(10 * time.Second))
 
